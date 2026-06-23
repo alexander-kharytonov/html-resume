@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Alexander Kharytonov" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexander Kharytonov - Contact</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://avatars.githubusercontent.com/u/14369174?v=4"
+        alt="Alexander Kharytonov"
+        width="100"
+        height="100"
+      />
+      <h1>Alexander Kharytonov</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>Contact Me</h2>
+        <form action="javascript:void(0);" method="POST">
+          <fieldset>
+            <label for="inquiry">Inquiry Type:</label>
+            <select id="inquiry" name="inquiry">
+              <option value="general">General Inquiry</option>
+              <option value="job">Job Opportunity</option>
+              <option value="feedback">Feedback</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </fieldset>
+          <fieldset>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="_replyto" required />
+          </fieldset>
+          <fieldset>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </fieldset>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Alexander Kharytonov</p>
+    </footer>
+  </body>
+</html>
