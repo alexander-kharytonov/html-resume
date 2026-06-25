@@ -3,55 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Alexander Kharytonov" />
+    <meta
+      name="description"
+      content="WBS | Contact Alexander Kharytonov, software engineer."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alexander Kharytonov - Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>WBS | Alexander Kharytonov - Contact</title>
   </head>
-  <body>
-    <header>
-      <img
-        src="https://avatars.githubusercontent.com/u/14369174?v=4"
-        alt="Alexander Kharytonov"
-        width="100"
-        height="100"
-      />
-      <h1>Alexander Kharytonov</h1>
+  <body class="page">
+    <header class="site-header">
+      <figure class="site-header__figure">
+        <img
+          src="https://avatars.githubusercontent.com/u/14369174?v=4"
+          alt="Portrait of Alexander Kharytonov"
+          width="100"
+          height="100"
+          class="site-header__image"
+        />
+      </figure>
+      <div class="site-header__content">
+        <h1 class="site-header__title">Alexander Kharytonov</h1>
+        <p class="site-header__subtitle">Software Engineer</p>
+      </div>
     </header>
-    <nav>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+    <nav class="site-nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="./about.html">About</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link nav-list__link--active" href="./contact.html"
+            >Contact</a
+          >
+        </li>
       </ul>
     </nav>
-    <main>
-      <section>
-        <h2>Contact Me</h2>
-        <form action="javascript:void(0);" method="POST">
-          <fieldset>
-            <label for="inquiry">Inquiry Type:</label>
-            <select id="inquiry" name="inquiry">
-              <option value="general">General Inquiry</option>
-              <option value="job">Job Opportunity</option>
-              <option value="feedback">Feedback</option>
-            </select>
+    <main class="site-main">
+      <section class="site-section">
+        <h2 class="site-section__title">Contact Me</h2>
+        <address class="contact-details">
+          <p>
+            GitHub:
+            <a
+              href="https://github.com/alexander-kharytonov"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              alexander-kharytonov
+            </a>
+          </p>
+        </address>
+        <form class="contact-form" action="javascript:void(0);" method="POST">
+          <fieldset class="contact-form__group">
+            <legend class="contact-form__legend">Send a message</legend>
+            <div class="contact-form__field">
+              <label for="inquiry">Inquiry Type:</label>
+              <select id="inquiry" name="inquiry">
+                <option value="general">General Inquiry</option>
+                <option value="job">Job Opportunity</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            <div class="contact-form__field">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="contact-form__field">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="_replyto" required />
+            </div>
+            <div class="contact-form__field">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
           </fieldset>
-          <fieldset>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-          </fieldset>
-          <fieldset>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="_replyto" required />
-          </fieldset>
-          <fieldset>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-          </fieldset>
-          <button type="submit">Send</button>
+          <button class="button" type="submit">Send</button>
         </form>
       </section>
     </main>
-    <footer>
+    <footer class="site-footer">
       <p>&copy; 2026 Alexander Kharytonov</p>
     </footer>
   </body>
