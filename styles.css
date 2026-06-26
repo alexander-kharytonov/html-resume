@@ -242,10 +242,9 @@ a:focus {
 
 .panic-popup__body {
   display: grid;
-  grid-template-columns: 64px 1fr auto;
+  grid-template-columns: 64px 1fr;
   align-items: center;
   gap: 20px;
-  min-height: 220px;
   padding: 30px 34px 32px;
 }
 
@@ -290,7 +289,8 @@ a:focus {
 }
 
 .panic-popup__button {
-  align-self: end;
+  grid-column: 1 / -1;
+  justify-self: end;
   min-width: 126px;
   padding: 10px 18px;
   border-top: 4px solid #ffffff;
@@ -447,7 +447,6 @@ a:focus {
   .panic-popup__body {
     grid-template-columns: 64px 1fr;
     gap: 18px;
-    min-height: 0;
     padding: 24px 20px;
   }
 
@@ -456,7 +455,6 @@ a:focus {
   }
 
   .panic-popup__button {
-    grid-column: 1 / -1;
     justify-self: end;
   }
 
