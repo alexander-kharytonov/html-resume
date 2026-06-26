@@ -26,7 +26,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  padding: 32px 20px 48px;
+  padding: 32px 20px;
   font-family: "Google Sans", "Google Sans Text", Arial, sans-serif;
   line-height: 1.5;
   color: var(--color-text);
@@ -52,6 +52,8 @@ a:focus {
 .page {
   max-width: 880px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-header,
@@ -78,7 +80,7 @@ a:focus {
 
 .site-header__image {
   width: 112px;
-  height: 112px;
+  aspect-ratio: 1 / 1;
   border-radius: 16px;
   object-fit: cover;
   border: 1px solid var(--color-border);
@@ -105,7 +107,9 @@ a:focus {
 
 .nav-list,
 .skill-list,
-.profile-list {
+.profile-list,
+.highlight-list,
+.detail-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -119,7 +123,7 @@ a:focus {
 
 .nav-list__link {
   display: inline-block;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border: 1px solid transparent;
   border-radius: 999px;
   background-color: transparent;
@@ -160,11 +164,19 @@ a:focus {
   border-radius: var(--radius-large);
 }
 
+.site-section--hero {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+}
+
 .site-section__title {
   margin-top: 0;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   font-size: 1.35rem;
   letter-spacing: -0.03em;
+}
+
+.site-section__intro {
+  margin-top: 0;
 }
 
 .site-section p:last-child,
@@ -175,7 +187,9 @@ a:focus {
 }
 
 .skill-list,
-.profile-list {
+.profile-list,
+.highlight-list,
+.detail-list {
   display: grid;
   gap: 10px;
 }
@@ -185,14 +199,22 @@ a:focus {
 }
 
 .skill-list__item,
-.profile-list__item {
-  padding: 12px 14px;
+.profile-list__item,
+.highlight-list__item,
+.detail-list__item {
+  padding: 12px 16px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-small);
   background-color: #fafafa;
 }
 
+.detail-list__item strong {
+  font-weight: 700;
+}
+
 .contact-details {
+  display: grid;
+  gap: 8px;
   margin-bottom: 20px;
   font-style: normal;
 }
@@ -280,7 +302,26 @@ a:focus {
 
 @media (max-width: 640px) {
   body {
-    padding: 20px 14px 32px;
+    padding: 16px;
+  }
+
+  .site-nav {
+    order: -1;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .nav-list__item {
+    flex: 1 1 0;
+  }
+
+  .nav-list__link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-header {
+    order: 0;
   }
 
   .site-header,
@@ -293,12 +334,17 @@ a:focus {
     align-items: flex-start;
   }
 
-  .site-nav {
-    padding: 14px 16px;
+  .site-header__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 
-  .nav-list {
-    flex-direction: column;
+  .site-header__content {
+    width: 100%;
+  }
+
+  .site-nav {
+    padding: 16px;
   }
 
   .nav-list__link,
