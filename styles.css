@@ -89,7 +89,7 @@ a:focus {
 .site-header__title {
   margin: 0;
   font-size: clamp(2rem, 4vw, 2.75rem);
-  line-height: 1.05;
+  line-height: 10.05;
   letter-spacing: -0.04em;
 }
 
